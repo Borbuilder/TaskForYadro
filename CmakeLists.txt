@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+
+# Добавление исполняемого файла
+add_executable(Task Main.cpp CompClub.cpp Client.cpp Table.cpp)
+
+# Добавление директории с заголовочными файлами
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+# Добавление опции компиляции для gcc в Linux
+if(UNIX)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+endif()
+
+# Компиляция под Windows с mingw
+if (MINGW)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++")
+endif()
