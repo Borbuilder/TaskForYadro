@@ -25,7 +25,7 @@ gcc -o Task Main.cpp CompClub.cpp Client.cpp Table.cpp -lstdc++
 ####
   или с использованием g++:
   ####
-  gcc -o Task Main.cpp CompClub.cpp Client.cpp Table.cpp
+  g++ -o Task Main.cpp CompClub.cpp Client.cpp Table.cpp
   ####
 2. Собирите файлы проекта для Windows с использованием MinGW командой:
 ####
